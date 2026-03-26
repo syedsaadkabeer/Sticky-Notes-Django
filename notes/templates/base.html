@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sticky Notes</title>
+</head>
+<body>
+
+    <!-- simple navbar -->
+    <nav>
+        <a href="/notes/">Notes</a>
+
+        {% if user.is_authenticated %}
+            <a href="/logout/">Logout</a>
+        {% else %}
+            <a href="/login/">Login</a>
+            <a href="/register/">Register</a>
+        {% endif %}
+    </nav>
+
+    <hr>
+
+    <!-- content block -->
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
